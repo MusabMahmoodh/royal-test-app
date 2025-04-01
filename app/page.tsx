@@ -281,49 +281,49 @@ export default function Home() {
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <Link
-              href="/"
+              href="/#"
               className="font-medium transition-colors hover:text-primary"
             >
               Home
             </Link>
             <Link
-              href="/about"
+              href="/#about"
               className="font-medium text-muted-foreground transition-colors hover:text-primary"
             >
               About
             </Link>
             <Link
-              href="/programs"
+              href="/#programs"
               className="font-medium text-muted-foreground transition-colors hover:text-primary"
             >
               Programs
             </Link>
             <Link
-              href="/achievements"
+              href="/#achievements"
               className="font-medium text-muted-foreground transition-colors hover:text-primary"
             >
               Achievements
             </Link>
             <Link
-              href="/facilities"
+              href="/#facilities"
               className="font-medium text-muted-foreground transition-colors hover:text-primary"
             >
               Facilities
             </Link>
             <Link
-              href="/news"
+              href="/#news"
               className="font-medium text-muted-foreground transition-colors hover:text-primary"
             >
               News
             </Link>
             <Link
-              href="/gallery"
+              href="/#gallery"
               className="font-medium text-muted-foreground transition-colors hover:text-primary"
             >
               Gallery
             </Link>
             <Link
-              href="/contact"
+              href="/#contact"
               className="font-medium text-muted-foreground transition-colors hover:text-primary"
             >
               Contact
