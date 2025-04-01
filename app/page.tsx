@@ -267,24 +267,35 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-20 items-center justify-between">
+        <div className="flex h-20 items-center justify-between container mx-auto px-4 md:px-6 lg:px-8">
           <div className="flex items-center gap-2">
             <div className="flex items-center justify-center w-10 h-10 rounded-md bg-blue-600 text-white">
               <GraduationCap className="h-6 w-6" />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight">Royal Academy</span>
+              <span className="text-xl font-bold tracking-tight">
+                Royal Academy
+              </span>
               <span className="text-xs text-muted-foreground">of Science</span>
             </div>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
-            <Link href="/" className="font-medium transition-colors hover:text-primary">
+            <Link
+              href="/"
+              className="font-medium transition-colors hover:text-primary"
+            >
               Home
             </Link>
-            <Link href="/about" className="font-medium text-muted-foreground transition-colors hover:text-primary">
+            <Link
+              href="/about"
+              className="font-medium text-muted-foreground transition-colors hover:text-primary"
+            >
               About
             </Link>
-            <Link href="/programs" className="font-medium text-muted-foreground transition-colors hover:text-primary">
+            <Link
+              href="/programs"
+              className="font-medium text-muted-foreground transition-colors hover:text-primary"
+            >
               Programs
             </Link>
             <Link
@@ -293,16 +304,28 @@ export default function Home() {
             >
               Achievements
             </Link>
-            <Link href="/facilities" className="font-medium text-muted-foreground transition-colors hover:text-primary">
+            <Link
+              href="/facilities"
+              className="font-medium text-muted-foreground transition-colors hover:text-primary"
+            >
               Facilities
             </Link>
-            <Link href="/news" className="font-medium text-muted-foreground transition-colors hover:text-primary">
+            <Link
+              href="/news"
+              className="font-medium text-muted-foreground transition-colors hover:text-primary"
+            >
               News
             </Link>
-            <Link href="/gallery" className="font-medium text-muted-foreground transition-colors hover:text-primary">
+            <Link
+              href="/gallery"
+              className="font-medium text-muted-foreground transition-colors hover:text-primary"
+            >
               Gallery
             </Link>
-            <Link href="/contact" className="font-medium text-muted-foreground transition-colors hover:text-primary">
+            <Link
+              href="/contact"
+              className="font-medium text-muted-foreground transition-colors hover:text-primary"
+            >
               Contact
             </Link>
           </nav>
@@ -336,7 +359,7 @@ export default function Home() {
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white overflow-hidden relative">
           {/* Animated background elements */}
-          <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden py-12 md:py-24 lg:py-32">
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-700 rounded-full opacity-20 animate-pulse"></div>
             <div
               className="absolute top-60 -left-20 w-60 h-60 bg-blue-600 rounded-full opacity-10 animate-pulse"
@@ -348,7 +371,7 @@ export default function Home() {
             ></div>
           </div>
 
-          <div className="container px-4 md:px-6 relative z-10">
+          <div className="container px-4 md:px-6 relative z-10 m-auto">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="flex flex-col justify-center space-y-4 animate-fadeIn">
                 <div className="space-y-2">
@@ -428,11 +451,16 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-900">About Us</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Excellence in Education</h2>
+                <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-900">
+                  About Us
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Excellence in Education
+                </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Royal Academy of Science is a premier educational institution dedicated to providing exceptional
-                  education in the biological and physical sciences for GCE A/L students in Tamil medium.
+                  Royal Academy of Science is a premier educational institution
+                  dedicated to providing exceptional education in the biological
+                  and physical sciences for GCE A/L students in Tamil medium.
                 </p>
               </div>
             </div>
@@ -443,8 +471,9 @@ export default function Home() {
                     <div className="grid gap-1">
                       <h3 className="text-xl font-bold">Our Mission</h3>
                       <p className="text-muted-foreground">
-                        To empower students with knowledge, skills, and values to excel in scientific disciplines and
-                        contribute to society.
+                        To empower students with knowledge, skills, and values
+                        to excel in scientific disciplines and contribute to
+                        society.
                       </p>
                     </div>
                   </li>
@@ -452,7 +481,8 @@ export default function Home() {
                     <div className="grid gap-1">
                       <h3 className="text-xl font-bold">Our Vision</h3>
                       <p className="text-muted-foreground">
-                        To be the leading center of excellence in science education, fostering innovation and academic
+                        To be the leading center of excellence in science
+                        education, fostering innovation and academic
                         achievement.
                       </p>
                     </div>
@@ -461,7 +491,8 @@ export default function Home() {
                     <div className="grid gap-1">
                       <h3 className="text-xl font-bold">Our Values</h3>
                       <p className="text-muted-foreground">
-                        Excellence, integrity, innovation, inclusivity, and commitment to student success.
+                        Excellence, integrity, innovation, inclusivity, and
+                        commitment to student success.
                       </p>
                     </div>
                   </li>
@@ -480,15 +511,22 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="programs" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+        <section
+          id="programs"
+          className="w-full py-12 md:py-24 lg:py-32 bg-gray-50"
+        >
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-900">Our Programs</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Comprehensive Science Education</h2>
+                <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-900">
+                  Our Programs
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Comprehensive Science Education
+                </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Explore our specialized programs designed to prepare students for academic excellence and future
-                  success.
+                  Explore our specialized programs designed to prepare students
+                  for academic excellence and future success.
                 </p>
               </div>
             </div>
@@ -499,12 +537,14 @@ export default function Home() {
                     <BookOpen className="h-6 w-6" />
                   </div>
                   <CardTitle>Biological Sciences</CardTitle>
-                  <CardDescription>Comprehensive biology curriculum</CardDescription>
+                  <CardDescription>
+                    Comprehensive biology curriculum
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="pb-2">
                   <p className="text-muted-foreground">
-                    In-depth study of biology, chemistry, physics, and mathematics tailored for medical and life science
-                    aspirants.
+                    In-depth study of biology, chemistry, physics, and
+                    mathematics tailored for medical and life science aspirants.
                   </p>
                 </CardContent>
                 <CardFooter>
@@ -520,12 +560,14 @@ export default function Home() {
                     <GraduationCap className="h-6 w-6" />
                   </div>
                   <CardTitle>Physical Sciences</CardTitle>
-                  <CardDescription>Advanced physics and mathematics</CardDescription>
+                  <CardDescription>
+                    Advanced physics and mathematics
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="pb-2">
                   <p className="text-muted-foreground">
-                    Rigorous training in physics, chemistry, and mathematics for engineering and technology career
-                    paths.
+                    Rigorous training in physics, chemistry, and mathematics for
+                    engineering and technology career paths.
                   </p>
                 </CardContent>
                 <CardFooter>
@@ -541,12 +583,14 @@ export default function Home() {
                     <Award className="h-6 w-6" />
                   </div>
                   <CardTitle>Special Programs</CardTitle>
-                  <CardDescription>Specialized courses and workshops</CardDescription>
+                  <CardDescription>
+                    Specialized courses and workshops
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="pb-2">
                   <p className="text-muted-foreground">
-                    Supplementary programs including practical labs, research projects, and competitive exam
-                    preparation.
+                    Supplementary programs including practical labs, research
+                    projects, and competitive exam preparation.
                   </p>
                 </CardContent>
                 <CardFooter>
@@ -565,10 +609,15 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-900">Achievements</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Our Success Stories</h2>
+                <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-900">
+                  Achievements
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Our Success Stories
+                </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Celebrating the remarkable achievements of our students and alumni.
+                  Celebrating the remarkable achievements of our students and
+                  alumni.
                 </p>
               </div>
             </div>
@@ -582,8 +631,12 @@ export default function Home() {
                     className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow"
                   >
                     <div className="mb-4">{stat.icon}</div>
-                    <h3 className="text-4xl font-bold text-blue-900 mb-2">{stat.value}</h3>
-                    <p className="text-sm text-muted-foreground">{stat.label}</p>
+                    <h3 className="text-4xl font-bold text-blue-900 mb-2">
+                      {stat.value}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      {stat.label}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -595,7 +648,11 @@ export default function Home() {
                 {successStories.map((story, index) => (
                   <div
                     key={story.id}
-                    className={`relative mb-16 md:mb-24 ${index % 2 === 0 ? "md:pr-12 md:text-right md:ml-auto md:mr-[50%]" : "md:pl-12 md:ml-[50%]"}`}
+                    className={`relative mb-16 md:mb-24 ${
+                      index % 2 === 0
+                        ? "md:pr-12 md:text-right md:ml-auto md:mr-[50%]"
+                        : "md:pl-12 md:ml-[50%]"
+                    }`}
                   >
                     <div
                       className="hidden md:block absolute top-6 w-6 h-6 rounded-full bg-blue-600 z-10 shadow-md"
@@ -604,7 +661,11 @@ export default function Home() {
 
                     <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 md:max-w-[90%]">
                       <div className="flex flex-col md:flex-row gap-6 items-center">
-                        <div className={`md:w-1/3 ${index % 2 === 1 ? "md:order-1" : "md:order-2"}`}>
+                        <div
+                          className={`md:w-1/3 ${
+                            index % 2 === 1 ? "md:order-1" : "md:order-2"
+                          }`}
+                        >
                           <Image
                             src={story.image || "/placeholder.svg"}
                             alt={story.name}
@@ -614,12 +675,18 @@ export default function Home() {
                           />
                           <div className="mt-4 text-center">
                             <h3 className="text-xl font-bold">{story.name}</h3>
-                            <p className="text-blue-600 font-medium">{story.achievement}</p>
+                            <p className="text-blue-600 font-medium">
+                              {story.achievement}
+                            </p>
                             <Badge className="mt-2">{story.year}</Badge>
                           </div>
                         </div>
 
-                        <div className={`md:w-2/3 ${index % 2 === 1 ? "md:order-2" : "md:order-1"}`}>
+                        <div
+                          className={`md:w-2/3 ${
+                            index % 2 === 1 ? "md:order-2" : "md:order-1"
+                          }`}
+                        >
                           <div className="mb-4">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -636,7 +703,9 @@ export default function Home() {
                               <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
                               <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
                             </svg>
-                            <p className="text-muted-foreground italic">{story.quote}</p>
+                            <p className="text-muted-foreground italic">
+                              {story.quote}
+                            </p>
                           </div>
                           <div className="flex items-center gap-2 text-sm">
                             <GraduationCap className="h-4 w-4 text-blue-600" />
@@ -651,9 +720,12 @@ export default function Home() {
 
               {/* Alumni Network */}
               <div className="mt-16 bg-gray-50 rounded-xl p-8">
-                <h3 className="text-2xl font-bold text-center mb-6">Our Alumni Network</h3>
+                <h3 className="text-2xl font-bold text-center mb-6">
+                  Our Alumni Network
+                </h3>
                 <p className="text-muted-foreground text-center mb-8">
-                  Our alumni network spans across prestigious universities and organizations worldwide, including:
+                  Our alumni network spans across prestigious universities and
+                  organizations worldwide, including:
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                   <div className="flex flex-col items-center p-4 border rounded-lg bg-white">
@@ -664,7 +736,9 @@ export default function Home() {
                       src="/images/uni-1.jpg"
                       width={80}
                     />
-                    <span className="text-sm text-center">University of Colombo</span>
+                    <span className="text-sm text-center">
+                      University of Colombo
+                    </span>
                   </div>
                   <div className="flex flex-col items-center p-4 border rounded-lg bg-white">
                     <Image
@@ -674,7 +748,9 @@ export default function Home() {
                       src="/images/uni-2.jpg"
                       width={80}
                     />
-                    <span className="text-sm text-center">University of Peradeniya</span>
+                    <span className="text-sm text-center">
+                      University of Peradeniya
+                    </span>
                   </div>
                   <div className="flex flex-col items-center p-4 border rounded-lg bg-white">
                     <Image
@@ -684,7 +760,9 @@ export default function Home() {
                       src="/images/uni-3.jpg"
                       width={80}
                     />
-                    <span className="text-sm text-center">University of Jaffna</span>
+                    <span className="text-sm text-center">
+                      University of Jaffna
+                    </span>
                   </div>
                   <div className="flex flex-col items-center p-4 border rounded-lg bg-white">
                     <Image
@@ -694,7 +772,9 @@ export default function Home() {
                       src="/images/uni-4.jpg"
                       width={80}
                     />
-                    <span className="text-sm text-center">University of Moratuwa</span>
+                    <span className="text-sm text-center">
+                      University of Moratuwa
+                    </span>
                   </div>
                 </div>
               </div>
@@ -710,17 +790,23 @@ export default function Home() {
         </section>
 
         {/* Classrooms Section */}
-        <section id="classrooms" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+        <section
+          id="classrooms"
+          className="w-full py-12 md:py-24 lg:py-32 bg-gray-50"
+        >
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-900">
                   State-of-the-Art Facilities
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Premium Learning Environment</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Premium Learning Environment
+                </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Our high-standard classrooms are designed to provide an optimal learning experience with the latest
-                  educational technology.
+                  Our high-standard classrooms are designed to provide an
+                  optimal learning experience with the latest educational
+                  technology.
                 </p>
               </div>
             </div>
@@ -737,8 +823,12 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
                     <div className="p-6 text-white">
-                      <h3 className="text-xl font-bold">Advanced Learning Spaces</h3>
-                      <p className="text-sm">Equipped with modern technology for interactive learning</p>
+                      <h3 className="text-xl font-bold">
+                        Advanced Learning Spaces
+                      </h3>
+                      <p className="text-sm">
+                        Equipped with modern technology for interactive learning
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -752,8 +842,12 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
                     <div className="p-6 text-white">
-                      <h3 className="text-xl font-bold">Integrated Science Labs</h3>
-                      <p className="text-sm">State-of-the-art equipment for practical experiments</p>
+                      <h3 className="text-xl font-bold">
+                        Integrated Science Labs
+                      </h3>
+                      <p className="text-sm">
+                        State-of-the-art equipment for practical experiments
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -763,11 +857,15 @@ export default function Home() {
                 {classroomFeatures.map((feature) => (
                   <Card key={feature.id} className="text-center">
                     <CardHeader>
-                      <div className="flex justify-center mb-4">{feature.icon}</div>
+                      <div className="flex justify-center mb-4">
+                        {feature.icon}
+                      </div>
                       <CardTitle>{feature.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground">{feature.description}</p>
+                      <p className="text-muted-foreground">
+                        {feature.description}
+                      </p>
                     </CardContent>
                   </Card>
                 ))}
@@ -791,9 +889,12 @@ export default function Home() {
                 <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-900">
                   Latest Updates
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">News & Announcements</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  News & Announcements
+                </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Stay updated with the latest happenings, events, and achievements at Royal Academy of Science.
+                  Stay updated with the latest happenings, events, and
+                  achievements at Royal Academy of Science.
                 </p>
               </div>
             </div>
@@ -811,7 +912,9 @@ export default function Home() {
                         width={300}
                       />
                       <div className="absolute top-2 right-2">
-                        <Badge className="bg-blue-600 hover:bg-blue-700">News</Badge>
+                        <Badge className="bg-blue-600 hover:bg-blue-700">
+                          News
+                        </Badge>
                       </div>
                     </div>
                     <CardHeader className="p-4">
@@ -819,10 +922,14 @@ export default function Home() {
                         <Calendar className="h-4 w-4" />
                         <span>{item.date}</span>
                       </div>
-                      <CardTitle className="line-clamp-2 text-lg">{item.title}</CardTitle>
+                      <CardTitle className="line-clamp-2 text-lg">
+                        {item.title}
+                      </CardTitle>
                     </CardHeader>
                     <CardContent className="p-4 pt-0">
-                      <p className="text-muted-foreground text-sm line-clamp-3">{item.excerpt}</p>
+                      <p className="text-muted-foreground text-sm line-clamp-3">
+                        {item.excerpt}
+                      </p>
                     </CardContent>
                     <CardFooter className="p-4 pt-0">
                       <Button variant="outline" size="sm" className="w-full">
@@ -849,14 +956,22 @@ export default function Home() {
         </section>
 
         {/* Gallery Section */}
-        <section id="gallery" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+        <section
+          id="gallery"
+          className="w-full py-12 md:py-24 lg:py-32 bg-gray-50"
+        >
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-900">Photo Gallery</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Explore Our Campus</h2>
+                <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-900">
+                  Photo Gallery
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Explore Our Campus
+                </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Take a visual tour of our facilities, classrooms, laboratories, and campus life.
+                  Take a visual tour of our facilities, classrooms,
+                  laboratories, and campus life.
                 </p>
               </div>
             </div>
@@ -865,7 +980,10 @@ export default function Home() {
               <Carousel className="w-full">
                 <CarouselContent>
                   {galleryImages.map((image) => (
-                    <CarouselItem key={image.id} className="md:basis-1/2 lg:basis-1/3">
+                    <CarouselItem
+                      key={image.id}
+                      className="md:basis-1/2 lg:basis-1/3"
+                    >
                       <div className="p-1">
                         <div className="overflow-hidden rounded-xl">
                           <Image
@@ -911,14 +1029,22 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="faculty" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-white to-gray-50">
+        <section
+          id="faculty"
+          className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-white to-gray-50"
+        >
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-900">Our Faculty</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Expert Educators</h2>
+                <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-900">
+                  Our Faculty
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Expert Educators
+                </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Meet our team of experienced and dedicated educators committed to student success.
+                  Meet our team of experienced and dedicated educators committed
+                  to student success.
                 </p>
               </div>
             </div>
@@ -928,11 +1054,20 @@ export default function Home() {
               <div className="mb-16 bg-white rounded-xl shadow-xl overflow-hidden">
                 <div className="grid md:grid-cols-2 items-center">
                   <div className="relative h-[400px] overflow-hidden">
-                    <Image alt="Featured Faculty Member" src="/images/faculty-1.jpg" fill className="object-cover" />
+                    <Image
+                      alt="Featured Faculty Member"
+                      src="/images/faculty-1.jpg"
+                      fill
+                      className="object-cover"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-transparent flex items-center">
                       <div className="p-8 text-white">
-                        <h3 className="text-3xl font-bold mb-2">Dr. Rajendran Nair</h3>
-                        <p className="text-xl text-blue-100">Head of Biology Department</p>
+                        <h3 className="text-3xl font-bold mb-2">
+                          Dr. Rajendran Nair
+                        </h3>
+                        <p className="text-xl text-blue-100">
+                          Head of Biology Department
+                        </p>
                         <div className="flex gap-3 mt-4">
                           <div className="bg-white/20 p-2 rounded-full">
                             <svg
@@ -978,9 +1113,21 @@ export default function Home() {
                               strokeLinecap="round"
                               strokeLinejoin="round"
                             >
-                              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                              <rect
+                                x="2"
+                                y="2"
+                                width="20"
+                                height="20"
+                                rx="5"
+                                ry="5"
+                              ></rect>
                               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                              <line
+                                x1="17.5"
+                                y1="6.5"
+                                x2="17.51"
+                                y2="6.5"
+                              ></line>
                             </svg>
                           </div>
                         </div>
@@ -991,31 +1138,51 @@ export default function Home() {
                     <div className="mb-6">
                       <div className="flex items-center gap-2 mb-4">
                         <div className="h-1 w-10 bg-blue-600"></div>
-                        <span className="text-blue-600 font-medium">Featured Educator</span>
+                        <span className="text-blue-600 font-medium">
+                          Featured Educator
+                        </span>
                       </div>
                       <p className="text-muted-foreground">
-                        Ph.D. in Molecular Biology with 15+ years of teaching experience at advanced levels. Dr. Nair
-                        has published numerous research papers in international journals and has mentored over 500
-                        students who have gone on to prestigious universities worldwide.
+                        Ph.D. in Molecular Biology with 15+ years of teaching
+                        experience at advanced levels. Dr. Nair has published
+                        numerous research papers in international journals and
+                        has mentored over 500 students who have gone on to
+                        prestigious universities worldwide.
                       </p>
                     </div>
 
                     <div className="grid grid-cols-2 gap-4 mb-6">
                       <div className="bg-gray-50 p-4 rounded-lg">
-                        <div className="text-3xl font-bold text-blue-600 mb-1">15+</div>
-                        <div className="text-sm text-muted-foreground">Years Experience</div>
+                        <div className="text-3xl font-bold text-blue-600 mb-1">
+                          15+
+                        </div>
+                        <div className="text-sm text-muted-foreground">
+                          Years Experience
+                        </div>
                       </div>
                       <div className="bg-gray-50 p-4 rounded-lg">
-                        <div className="text-3xl font-bold text-blue-600 mb-1">12</div>
-                        <div className="text-sm text-muted-foreground">Research Papers</div>
+                        <div className="text-3xl font-bold text-blue-600 mb-1">
+                          12
+                        </div>
+                        <div className="text-sm text-muted-foreground">
+                          Research Papers
+                        </div>
                       </div>
                       <div className="bg-gray-50 p-4 rounded-lg">
-                        <div className="text-3xl font-bold text-blue-600 mb-1">500+</div>
-                        <div className="text-sm text-muted-foreground">Students Mentored</div>
+                        <div className="text-3xl font-bold text-blue-600 mb-1">
+                          500+
+                        </div>
+                        <div className="text-sm text-muted-foreground">
+                          Students Mentored
+                        </div>
                       </div>
                       <div className="bg-gray-50 p-4 rounded-lg">
-                        <div className="text-3xl font-bold text-blue-600 mb-1">8</div>
-                        <div className="text-sm text-muted-foreground">Awards Received</div>
+                        <div className="text-3xl font-bold text-blue-600 mb-1">
+                          8
+                        </div>
+                        <div className="text-sm text-muted-foreground">
+                          Awards Received
+                        </div>
                       </div>
                     </div>
 
@@ -1030,7 +1197,9 @@ export default function Home() {
               </div>
 
               {/* Other Faculty Members */}
-              <h3 className="text-2xl font-bold mb-8 text-center">Meet Our Other Specialists</h3>
+              <h3 className="text-2xl font-bold mb-8 text-center">
+                Meet Our Other Specialists
+              </h3>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Faculty Member 1 */}
@@ -1045,9 +1214,10 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                       <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                         <p className="text-white text-sm mb-4">
-                          Renowned physicist with research publications and specialized in preparing students for
-                          competitive exams. Prof. Chandran has been recognized nationally for her innovative teaching
-                          methods.
+                          Renowned physicist with research publications and
+                          specialized in preparing students for competitive
+                          exams. Prof. Chandran has been recognized nationally
+                          for her innovative teaching methods.
                         </p>
                         <div className="flex gap-2">
                           <Button
@@ -1057,7 +1227,10 @@ export default function Home() {
                           >
                             View Profile
                           </Button>
-                          <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
+                          <Button
+                            size="sm"
+                            className="bg-blue-600 hover:bg-blue-700"
+                          >
                             Contact
                           </Button>
                         </div>
@@ -1066,10 +1239,16 @@ export default function Home() {
                   </div>
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-xl font-bold">Prof. Lakshmi Chandran</h3>
-                      <Badge className="bg-blue-100 text-blue-900 hover:bg-blue-200">Physics</Badge>
+                      <h3 className="text-xl font-bold">
+                        Prof. Lakshmi Chandran
+                      </h3>
+                      <Badge className="bg-blue-100 text-blue-900 hover:bg-blue-200">
+                        Physics
+                      </Badge>
                     </div>
-                    <p className="text-muted-foreground text-sm">Physics Department Chair</p>
+                    <p className="text-muted-foreground text-sm">
+                      Physics Department Chair
+                    </p>
                     <div className="mt-4 flex items-center gap-2">
                       <div className="flex -space-x-2">
                         <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-xs">
@@ -1120,7 +1299,9 @@ export default function Home() {
                           </svg>
                         </div>
                       </div>
-                      <span className="text-xs text-muted-foreground">12+ years experience</span>
+                      <span className="text-xs text-muted-foreground">
+                        12+ years experience
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -1137,8 +1318,10 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                       <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                         <p className="text-white text-sm mb-4">
-                          Award-winning educator with innovative teaching methodologies and practical laboratory
-                          expertise. Dr. Kumar has developed several practical experiments that are now used nationwide.
+                          Award-winning educator with innovative teaching
+                          methodologies and practical laboratory expertise. Dr.
+                          Kumar has developed several practical experiments that
+                          are now used nationwide.
                         </p>
                         <div className="flex gap-2">
                           <Button
@@ -1148,7 +1331,10 @@ export default function Home() {
                           >
                             View Profile
                           </Button>
-                          <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
+                          <Button
+                            size="sm"
+                            className="bg-blue-600 hover:bg-blue-700"
+                          >
                             Contact
                           </Button>
                         </div>
@@ -1158,9 +1344,13 @@ export default function Home() {
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-2">
                       <h3 className="text-xl font-bold">Dr. Anand Kumar</h3>
-                      <Badge className="bg-blue-100 text-blue-900 hover:bg-blue-200">Chemistry</Badge>
+                      <Badge className="bg-blue-100 text-blue-900 hover:bg-blue-200">
+                        Chemistry
+                      </Badge>
                     </div>
-                    <p className="text-muted-foreground text-sm">Chemistry Specialist</p>
+                    <p className="text-muted-foreground text-sm">
+                      Chemistry Specialist
+                    </p>
                     <div className="mt-4 flex items-center gap-2">
                       <div className="flex -space-x-2">
                         <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-xs">
@@ -1211,7 +1401,9 @@ export default function Home() {
                           </svg>
                         </div>
                       </div>
-                      <span className="text-xs text-muted-foreground">10+ years experience</span>
+                      <span className="text-xs text-muted-foreground">
+                        10+ years experience
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -1228,9 +1420,10 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                       <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                         <p className="text-white text-sm mb-4">
-                          Mathematics expert with a passion for making complex concepts accessible to all students. Ms.
-                          Patel has developed a unique approach to teaching calculus that has improved student outcomes
-                          by 35%.
+                          Mathematics expert with a passion for making complex
+                          concepts accessible to all students. Ms. Patel has
+                          developed a unique approach to teaching calculus that
+                          has improved student outcomes by 35%.
                         </p>
                         <div className="flex gap-2">
                           <Button
@@ -1240,7 +1433,10 @@ export default function Home() {
                           >
                             View Profile
                           </Button>
-                          <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
+                          <Button
+                            size="sm"
+                            className="bg-blue-600 hover:bg-blue-700"
+                          >
                             Contact
                           </Button>
                         </div>
@@ -1250,9 +1446,13 @@ export default function Home() {
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-2">
                       <h3 className="text-xl font-bold">Ms. Divya Patel</h3>
-                      <Badge className="bg-blue-100 text-blue-900 hover:bg-blue-200">Mathematics</Badge>
+                      <Badge className="bg-blue-100 text-blue-900 hover:bg-blue-200">
+                        Mathematics
+                      </Badge>
                     </div>
-                    <p className="text-muted-foreground text-sm">Mathematics Coordinator</p>
+                    <p className="text-muted-foreground text-sm">
+                      Mathematics Coordinator
+                    </p>
                     <div className="mt-4 flex items-center gap-2">
                       <div className="flex -space-x-2">
                         <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-xs">
@@ -1303,7 +1503,9 @@ export default function Home() {
                           </svg>
                         </div>
                       </div>
-                      <span className="text-xs text-muted-foreground">8+ years experience</span>
+                      <span className="text-xs text-muted-foreground">
+                        8+ years experience
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -1319,18 +1521,23 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="app" className="w-full py-12 md:py-24 lg:py-32 bg-blue-900 text-white">
+        <section
+          id="app"
+          className="w-full py-12 md:py-24 lg:py-32 bg-blue-900 text-white"
+        >
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-blue-800 px-3 py-1 text-sm">Mobile App</div>
+                  <div className="inline-block rounded-lg bg-blue-800 px-3 py-1 text-sm">
+                    Mobile App
+                  </div>
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                     Learning at Your Fingertips
                   </h2>
                   <p className="max-w-[600px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    Download our mobile app for access to study materials, practice tests, and personalized learning
-                    paths.
+                    Download our mobile app for access to study materials,
+                    practice tests, and personalized learning paths.
                   </p>
                 </div>
                 <div className="flex flex-col gap-4 sm:flex-row">
@@ -1432,7 +1639,9 @@ export default function Home() {
                       <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
                     </svg>
                   </div>
-                  <div className="text-sm text-gray-300">4.9 Rating (2000+ Reviews)</div>
+                  <div className="text-sm text-gray-300">
+                    4.9 Rating (2000+ Reviews)
+                  </div>
                 </div>
                 <ul className="space-y-2 mt-4">
                   <li className="flex items-center gap-2">
@@ -1511,10 +1720,15 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-900">Contact Us</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Get in Touch</h2>
+                <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-900">
+                  Contact Us
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Get in Touch
+                </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Have questions? Reach out to us for more information about our programs and admissions.
+                  Have questions? Reach out to us for more information about our
+                  programs and admissions.
                 </p>
               </div>
             </div>
@@ -1543,7 +1757,10 @@ export default function Home() {
                 <div className="grid gap-2">
                   <h3 className="text-xl font-bold">Follow Us</h3>
                   <div className="flex space-x-4">
-                    <Link href="#" className="text-muted-foreground hover:text-primary">
+                    <Link
+                      href="#"
+                      className="text-muted-foreground hover:text-primary"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -1560,7 +1777,10 @@ export default function Home() {
                       </svg>
                       <span className="sr-only">Facebook</span>
                     </Link>
-                    <Link href="#" className="text-muted-foreground hover:text-primary">
+                    <Link
+                      href="#"
+                      className="text-muted-foreground hover:text-primary"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -1573,13 +1793,23 @@ export default function Home() {
                         strokeLinejoin="round"
                         className="h-5 w-5"
                       >
-                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                        <rect
+                          x="2"
+                          y="2"
+                          width="20"
+                          height="20"
+                          rx="5"
+                          ry="5"
+                        />
                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
                       </svg>
                       <span className="sr-only">Instagram</span>
                     </Link>
-                    <Link href="#" className="text-muted-foreground hover:text-primary">
+                    <Link
+                      href="#"
+                      className="text-muted-foreground hover:text-primary"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -1604,16 +1834,26 @@ export default function Home() {
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="first-name">First name</Label>
-                      <Input id="first-name" placeholder="Enter your first name" />
+                      <Input
+                        id="first-name"
+                        placeholder="Enter your first name"
+                      />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="last-name">Last name</Label>
-                      <Input id="last-name" placeholder="Enter your last name" />
+                      <Input
+                        id="last-name"
+                        placeholder="Enter your last name"
+                      />
                     </div>
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="Enter your email" />
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="Enter your email"
+                    />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="message">Message</Label>
@@ -1641,12 +1881,17 @@ export default function Home() {
                   <GraduationCap className="h-6 w-6" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-xl font-bold tracking-tight">Royal Academy</span>
-                  <span className="text-xs text-muted-foreground">of Science</span>
+                  <span className="text-xl font-bold tracking-tight">
+                    Royal Academy
+                  </span>
+                  <span className="text-xs text-muted-foreground">
+                    of Science
+                  </span>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground">
-                Excellence in GCE A/L Biological and Physical Science education in Tamil medium.
+                Excellence in GCE A/L Biological and Physical Science education
+                in Tamil medium.
               </p>
             </div>
 
@@ -1713,7 +1958,8 @@ export default function Home() {
             <div className="space-y-4">
               <h3 className="text-lg font-semibold">Newsletter</h3>
               <p className="text-sm text-muted-foreground">
-                Subscribe to our newsletter for updates on programs, events, and achievements.
+                Subscribe to our newsletter for updates on programs, events, and
+                achievements.
               </p>
               <div className="flex space-x-2">
                 <Input placeholder="Enter your email" />
@@ -1724,11 +1970,14 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
-            <p>© {new Date().getFullYear()} Royal Academy of Science. All rights reserved.</p>
+            <p>
+              © {new Date().getFullYear()} Royal Academy of Science. All rights
+              reserved.
+            </p>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }
 
