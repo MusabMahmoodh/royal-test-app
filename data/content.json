@@ -1,0 +1,498 @@
+{
+  "hero": {
+    "title": "Leading Institute for GCE A/L Sciences",
+    "content": [
+      {
+        "phrase": "Expert teachers with decades of experience in science education",
+        "image": "/images/hero.jpg"
+      },
+      {
+        "phrase": "State-of-the-art classrooms and laboratory facilities",
+        "image": "/images/classroom-1.jpg"
+      },
+      {
+        "phrase": "Exceptional achievers with top university placements",
+        "image": "/images/student-1.jpg"
+      },
+      {
+        "phrase": "Innovative mobile app for seamless learning experience",
+        "image": "/images/app-mockup.png"
+      }
+    ],
+    "buttons": {
+      "primary": "Explore Programs",
+      "secondary": "Learn More"
+    },
+    "tags": [
+      {
+        "text": "Expert Teachers",
+        "link": "#faculty",
+        "icon": "Users"
+      },
+      {
+        "text": "Modern Classrooms",
+        "link": "#classrooms",
+        "icon": "GraduationCap"
+      },
+      {
+        "text": "Top Achievers",
+        "link": "#achievements",
+        "icon": "Award"
+      },
+      {
+        "text": "Mobile App",
+        "link": "#app",
+        "icon": "Download"
+      }
+    ]
+  },
+  "announcement": {
+    "text": "Applications for 2025 academic year are now open!",
+    "steps": ["Apply", "Interview", "Enroll"]
+  },
+  "about": {
+    "badge": "About Us",
+    "title": "Excellence in Education",
+    "description": "Royal Academy of Science is a premier educational institution dedicated to providing exceptional education in the biological and physical sciences for GCE A/L students in Tamil medium.",
+    "sections": [
+      {
+        "title": "Our Mission",
+        "description": "To empower students with knowledge, skills, and values to excel in scientific disciplines and contribute to society."
+      },
+      {
+        "title": "Our Vision",
+        "description": "To be the leading center of excellence in science education, fostering innovation and academic achievement."
+      },
+      {
+        "title": "Our Values",
+        "description": "Excellence, integrity, innovation, inclusivity, and commitment to student success."
+      }
+    ]
+  },
+  "programs": {
+    "badge": "Our Programs",
+    "title": "Comprehensive Science Education",
+    "description": "Explore our specialized programs designed to prepare students for academic excellence and future success.",
+    "items": [
+      {
+        "title": "Biological Sciences",
+        "subtitle": "Comprehensive biology curriculum",
+        "description": "In-depth study of biology, chemistry, physics, and mathematics tailored for medical and life science aspirants.",
+        "icon": "BookOpen"
+      },
+      {
+        "title": "Physical Sciences",
+        "subtitle": "Advanced physics and mathematics",
+        "description": "Rigorous training in physics, chemistry, and mathematics for engineering and technology career paths.",
+        "icon": "GraduationCap"
+      },
+      {
+        "title": "Special Programs",
+        "subtitle": "Specialized courses and workshops",
+        "description": "Supplementary programs including practical labs, research projects, and competitive exam preparation.",
+        "icon": "Award"
+      }
+    ]
+  },
+  "achievements": {
+    "badge": "Achievements",
+    "title": "Our Success Stories",
+    "description": "Celebrating the remarkable achievements of our students and alumni.",
+    "stats": [
+      {
+        "id": 1,
+        "value": "98%",
+        "label": "Pass Rate in GCE A/L Examinations",
+        "icon": "CheckCircle"
+      },
+      {
+        "id": 2,
+        "value": "75+",
+        "label": "University Placements Annually",
+        "icon": "GraduationCap"
+      },
+      {
+        "id": 3,
+        "value": "25+",
+        "label": "National Level Award Winners",
+        "icon": "Trophy"
+      },
+      {
+        "id": 4,
+        "value": "92%",
+        "label": "Students Achieving A or B Grades",
+        "icon": "TrendingUp"
+      }
+    ],
+    "stories": [
+      {
+        "id": 1,
+        "name": "Priya Ramachandran",
+        "achievement": "District First - Biology",
+        "year": "2022",
+        "image": "/images/student-1.jpg",
+        "quote": "The dedicated faculty and comprehensive curriculum at Royal Academy prepared me thoroughly for my examinations. The practical sessions were particularly helpful.",
+        "university": "University of Colombo - Medicine"
+      },
+      {
+        "id": 2,
+        "name": "Karthik Suresh",
+        "achievement": "National Merit - Physics",
+        "year": "2021",
+        "image": "/images/student-2.jpg",
+        "quote": "The practical approach to learning and problem-solving techniques helped me excel in competitive examinations. I'm grateful for the mentorship I received.",
+        "university": "University of Moratuwa - Engineering"
+      },
+      {
+        "id": 3,
+        "name": "Anita Krishnan",
+        "achievement": "International Science Olympiad - Silver Medal",
+        "year": "2023",
+        "image": "/images/student-3.jpg",
+        "quote": "Royal Academy's special programs for competitive exams gave me the edge I needed. The teachers went above and beyond to support my preparation.",
+        "university": "University of Peradeniya - Science"
+      }
+    ],
+    "alumni": {
+      "title": "Our Alumni Network",
+      "description": "Our alumni network spans across prestigious universities and organizations worldwide, including:",
+      "universities": [
+        {
+          "name": "University of Colombo",
+          "image": "/images/uni-1.jpg"
+        },
+        {
+          "name": "University of Peradeniya",
+          "image": "/images/uni-2.jpg"
+        },
+        {
+          "name": "University of Jaffna",
+          "image": "/images/uni-3.jpg"
+        },
+        {
+          "name": "University of Moratuwa",
+          "image": "/images/uni-4.jpg"
+        }
+      ]
+    }
+  },
+  "classrooms": {
+    "badge": "State-of-the-Art Facilities",
+    "title": "Premium Learning Environment",
+    "description": "Our high-standard classrooms are designed to provide an optimal learning experience with the latest educational technology.",
+    "images": [
+      {
+        "src": "/images/classroom-1.jpg",
+        "alt": "Modern Classroom",
+        "title": "Advanced Learning Spaces",
+        "description": "Equipped with modern technology for interactive learning"
+      },
+      {
+        "src": "/images/classroom-2.jpg",
+        "alt": "Science Laboratory",
+        "title": "Integrated Science Labs",
+        "description": "State-of-the-art equipment for practical experiments"
+      }
+    ],
+    "features": [
+      {
+        "id": 1,
+        "title": "Smart Classrooms",
+        "description": "Interactive whiteboards, projectors, and digital learning tools for enhanced teaching and learning.",
+        "icon": "Monitor"
+      },
+      {
+        "id": 2,
+        "title": "Laboratory Integration",
+        "description": "Classrooms connected to laboratories for seamless transition between theory and practical sessions.",
+        "icon": "Flask"
+      },
+      {
+        "id": 3,
+        "title": "Ergonomic Design",
+        "description": "Comfortable seating, optimal lighting, and acoustics designed for extended learning sessions.",
+        "icon": "MapPin"
+      },
+      {
+        "id": 4,
+        "title": "Small Class Sizes",
+        "description": "Limited student numbers per class to ensure personalized attention and effective learning.",
+        "icon": "Users"
+      }
+    ],
+    "cta": "Schedule a Tour"
+  },
+  "news": {
+    "badge": "Latest Updates",
+    "title": "News & Announcements",
+    "description": "Stay updated with the latest happenings, events, and achievements at Royal Academy of Science.",
+    "items": [
+      {
+        "id": 1,
+        "title": "Royal Academy Students Win National Science Competition",
+        "excerpt": "Our students secured first place in the National Science Olympiad, showcasing exceptional talent in physics and chemistry.",
+        "date": "June 15, 2023",
+        "image": "/images/news-1.jpg"
+      },
+      {
+        "id": 2,
+        "title": "New Laboratory Equipment Installed",
+        "excerpt": "State-of-the-art laboratory equipment has been installed to enhance practical learning experiences for our students.",
+        "date": "July 22, 2023",
+        "image": "/images/news-2.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Mobile App Updated with New Features",
+        "excerpt": "Our mobile application now includes interactive quizzes, video lectures, and personalized learning paths.",
+        "date": "August 10, 2023",
+        "image": "/images/news-3.jpg"
+      },
+      {
+        "id": 4,
+        "title": "Open Day for Prospective Students",
+        "excerpt": "Join us for an open day to explore our facilities, meet our faculty, and learn about our programs.",
+        "date": "September 5, 2023",
+        "image": "/images/news-4.jpg"
+      }
+    ],
+    "cta": "View All News"
+  },
+  "gallery": {
+    "badge": "Photo Gallery",
+    "title": "Explore Our Campus",
+    "description": "Take a visual tour of our facilities, classrooms, laboratories, and campus life.",
+    "images": [
+      { "id": 1, "src": "/images/gallery-1.jpg", "alt": "Campus Building", "caption": "Main Campus Building" },
+      { "id": 2, "src": "/images/gallery-2.jpg", "alt": "Science Lab", "caption": "Advanced Science Laboratory" },
+      { "id": 3, "src": "/images/gallery-3.jpg", "alt": "Library", "caption": "Modern Library Facilities" },
+      { "id": 4, "src": "/images/gallery-4.jpg", "alt": "Classroom", "caption": "Interactive Classroom" },
+      { "id": 5, "src": "/images/gallery-5.jpg", "alt": "Computer Lab", "caption": "Computer Laboratory" },
+      { "id": 6, "src": "/images/gallery-6.jpg", "alt": "Auditorium", "caption": "Multipurpose Auditorium" }
+    ],
+    "cta": "View Full Gallery"
+  },
+  "faculty": {
+    "badge": "Our Faculty",
+    "title": "Expert Educators",
+    "description": "Meet our team of experienced and dedicated educators committed to student success.",
+    "featured": {
+      "name": "Dr. Rajendran Nair",
+      "position": "Head of Biology Department",
+      "image": "/images/faculty-1.jpg",
+      "description": "Ph.D. in Molecular Biology with 15+ years of teaching experience at advanced levels. Dr. Nair has published numerous research papers in international journals and has mentored over 500 students who have gone on to prestigious universities worldwide.",
+      "stats": [
+        { "value": "15+", "label": "Years Experience" },
+        { "value": "12", "label": "Research Papers" },
+        { "value": "500+", "label": "Students Mentored" },
+        { "value": "8", "label": "Awards Received" }
+      ]
+    },
+    "members": [
+      {
+        "name": "Prof. Lakshmi Chandran",
+        "position": "Physics Department Chair",
+        "department": "Physics",
+        "image": "/images/faculty-2.jpg",
+        "description": "Renowned physicist with research publications and specialized in preparing students for competitive exams. Prof. Chandran has been recognized nationally for her innovative teaching methods.",
+        "experience": "12+ years experience"
+      },
+      {
+        "name": "Dr. Anand Kumar",
+        "position": "Chemistry Specialist",
+        "department": "Chemistry",
+        "image": "/images/faculty-3.jpg",
+        "description": "Award-winning educator with innovative teaching methodologies and practical laboratory expertise. Dr. Kumar has developed several practical experiments that are now used nationwide.",
+        "experience": "10+ years experience"
+      },
+      {
+        "name": "Ms. Divya Patel",
+        "position": "Mathematics Coordinator",
+        "department": "Mathematics",
+        "image": "/images/student-3.jpg",
+        "description": "Mathematics expert with a passion for making complex concepts accessible to all students. Ms. Patel has developed a unique approach to teaching calculus that has improved student outcomes by 35%.",
+        "experience": "8+ years experience"
+      }
+    ],
+    "cta": "View All Faculty Members"
+  },
+  "app": {
+    "badge": "Mobile App",
+    "title": "Learning at Your Fingertips",
+    "description": "Download our mobile app for access to study materials, practice tests, and personalized learning paths.",
+    "buttons": {
+      "googlePlay": "Get it on Google Play",
+      "appStore": "Download on App Store"
+    },
+    "googlePlayLink": "https://play.google.com/store/apps/details?id=com.fazlur",
+    "appStoreLink": "#",
+    "image": "/images/app-mockup.png"
+  },
+  "footer": {
+    "description": "Premier educational institute for GCE A/L sciences in Tamil medium.",
+    "quickLinks": [
+      { "text": "About Us", "href": "#" },
+      { "text": "Our Programs", "href": "#" },
+      { "text": "Achievements", "href": "#" },
+      { "text": "News & Events", "href": "#" }
+    ],
+    "facilities": [
+      { "text": "Smart Classrooms", "href": "#" },
+      { "text": "Science Labs", "href": "#" },
+      { "text": "Library", "href": "#" },
+      { "text": "Auditorium", "href": "#" }
+    ],
+    "contact": {
+      "address": "123, Main Street, Colombo, Sri Lanka",
+      "email": "info@royalacademy.lk",
+      "phone": "+94 11 123 4567"
+    },
+    "copyright": "© 2024 Royal Academy of Science. All rights reserved."
+  },
+  "successStory": {
+    "badge": "Excellence in Action",
+    "title": "Our 2024 Success Story",
+    "description": "Our students continue to break records and set new standards of excellence",
+    "achievements": [
+      {
+        "value": "42+",
+        "label": "Engineers",
+        "description": "Joined top engineering firms and universities worldwide",
+        "icon": "Ruler",
+        "accentColor": "bg-blue-600",
+        "lightColor": "bg-blue-100"
+      },
+      {
+        "value": "38+",
+        "label": "Doctors",
+        "description": "Admitted to prestigious medical schools across the country",
+        "icon": "Activity",
+        "accentColor": "bg-green-600",
+        "lightColor": "bg-green-100"
+      },
+      {
+        "value": "156+",
+        "label": "University Entrants",
+        "description": "Secured placements at top universities locally and abroad",
+        "icon": "GraduationCap",
+        "accentColor": "bg-amber-600",
+        "lightColor": "bg-amber-100"
+      },
+      {
+        "value": "94%",
+        "label": "Success Rate",
+        "description": "Overall exam pass rate, consistently above national average",
+        "icon": "TrendingUp",
+        "accentColor": "bg-purple-600",
+        "lightColor": "bg-purple-100"
+      }
+    ],
+    "cta": "Join our next success story"
+  },
+  "contact": {
+    "badge": "Get in Touch",
+    "title": "Contact Us",
+    "description": "Have questions or need more information? Reach out to us through any of these channels.",
+    "methods": [
+      {
+        "type": "phone",
+        "label": "Call Us",
+        "value": "+94 11 123 4567",
+        "description": "Available Monday to Friday, 8:00 AM - 6:00 PM",
+        "icon": "Phone",
+        "action": "tel:+94111234567",
+        "color": "bg-blue-600",
+        "lightColor": "bg-blue-100"
+      },
+      {
+        "type": "email",
+        "label": "Email Us",
+        "value": "info@royalacademy.lk",
+        "description": "We'll respond within 24 hours",
+        "icon": "Mail",
+        "action": "mailto:info@royalacademy.lk",
+        "color": "bg-red-600",
+        "lightColor": "bg-red-100"
+      },
+      {
+        "type": "whatsapp",
+        "label": "WhatsApp",
+        "value": "+94 77 123 4567",
+        "description": "Chat with our admissions team",
+        "icon": "MessageCircle",
+        "action": "https://wa.me/94771234567",
+        "color": "bg-green-600",
+        "lightColor": "bg-green-100"
+      }
+    ],
+    "cta": "Send Message",
+    "formFields": [
+      {
+        "id": "name",
+        "label": "Your Name",
+        "type": "text",
+        "placeholder": "Enter your full name",
+        "required": true
+      },
+      {
+        "id": "email",
+        "label": "Email Address",
+        "type": "email",
+        "placeholder": "Enter your email address",
+        "required": true
+      },
+      {
+        "id": "phone",
+        "label": "Phone Number",
+        "type": "tel",
+        "placeholder": "Enter your phone number",
+        "required": false
+      },
+      {
+        "id": "subject",
+        "label": "Subject",
+        "type": "text",
+        "placeholder": "What is this regarding?",
+        "required": true
+      },
+      {
+        "id": "message",
+        "label": "Message",
+        "type": "textarea",
+        "placeholder": "How can we help you?",
+        "required": true
+      }
+    ]
+  },
+  "floatingContact": {
+    "title": "Contact Us",
+    "subtitle": "We're here to help",
+    "methods": [
+      {
+        "type": "phone",
+        "label": "Call",
+        "value": "+94 11 123 4567",
+        "icon": "Phone",
+        "action": "tel:+94111234567",
+        "color": "bg-blue-600"
+      },
+      {
+        "type": "whatsapp",
+        "label": "WhatsApp",
+        "value": "+94 77 123 4567",
+        "icon": "MessageCircle",
+        "action": "https://wa.me/94771234567",
+        "color": "bg-emerald-600"
+      },
+      {
+        "type": "email",
+        "label": "Email",
+        "value": "info@royalacademy.lk",
+        "icon": "Mail",
+        "action": "mailto:info@royalacademy.lk",
+        "color": "bg-green-600"
+      }
+    ]
+  }
+}
+
