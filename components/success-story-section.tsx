@@ -1,13 +1,13 @@
-"use client";
+"use client"
 
-import { SectionHeading } from "@/components/section-heading";
-import { SuccessCard } from "@/components/success-card";
-import { CallToAction } from "@/components/call-to-action";
-import contentData from "@/data/content.json";
-import { motion } from "framer-motion";
+import { SectionHeading } from "@/components/section-heading"
+import { SuccessCard } from "@/components/success-card"
+import { CallToAction } from "@/components/call-to-action"
+import contentData from "@/data/content.json"
+import { motion } from "framer-motion"
 
 export function SuccessStorySection() {
-  const { successStory } = contentData;
+  const { successStory } = contentData
 
   // Animation variants
   const containerVariants = {
@@ -18,7 +18,7 @@ export function SuccessStorySection() {
         staggerChildren: 0.2,
       },
     },
-  };
+  }
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -30,16 +30,12 @@ export function SuccessStorySection() {
         stiffness: 100,
       },
     },
-  };
+  }
 
   return (
-    <section className="w-full py-12 bg-gradient-to-r from-blue-50 via-white to-blue-50 border-b">
+    <section className="w-full py-12 bg-gradient-to-r from-gold-50 via-white to-gold-50 border-b">
       <div className="container px-4 md:px-6 mx-auto">
-        <SectionHeading
-          badge={successStory.badge}
-          title={successStory.title}
-          description={successStory.description}
-        />
+        <SectionHeading badge={successStory.badge} title={successStory.title} description={successStory.description} />
 
         <motion.div
           className="relative"
@@ -49,8 +45,8 @@ export function SuccessStorySection() {
           viewport={{ once: true, margin: "-100px" }}
         >
           {/* Decorative elements */}
-          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-blue-100 -z-10 hidden md:block"></div>
-          <div className="absolute top-0 bottom-0 left-1/2 w-0.5 bg-blue-100 -z-10 hidden md:block"></div>
+          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gold-100 -z-10 hidden md:block"></div>
+          <div className="absolute top-0 bottom-0 left-1/2 w-0.5 bg-gold-100 -z-10 hidden md:block"></div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {successStory.achievements.map((item, index) => (
@@ -73,5 +69,6 @@ export function SuccessStorySection() {
         </div>
       </div>
     </section>
-  );
+  )
 }
+

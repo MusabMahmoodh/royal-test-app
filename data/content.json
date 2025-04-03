@@ -411,8 +411,8 @@
         "description": "We'll respond within 24 hours",
         "icon": "Mail",
         "action": "mailto:info@royalacademy.lk",
-        "color": "bg-red-600",
-        "lightColor": "bg-red-100"
+        "color": "bg-green-600",
+        "lightColor": "bg-green-100"
       },
       {
         "type": "whatsapp",
@@ -421,8 +421,8 @@
         "description": "Chat with our admissions team",
         "icon": "MessageCircle",
         "action": "https://wa.me/94771234567",
-        "color": "bg-green-600",
-        "lightColor": "bg-green-100"
+        "color": "bg-emerald-600",
+        "lightColor": "bg-emerald-100"
       }
     ],
     "cta": "Send Message",

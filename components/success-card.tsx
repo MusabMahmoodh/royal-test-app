@@ -1,90 +1,83 @@
-"use client";
+"use client"
 
-import { Activity, GraduationCap, Ruler, TrendingUp } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
+import { Activity, GraduationCap, Ruler, TrendingUp } from "lucide-react"
+import { useState, useEffect, useRef } from "react"
 
 interface SuccessCardProps {
-  value: string;
-  label: string;
-  description: string;
-  icon: string;
-  accentColor: string;
-  lightColor: string;
+  value: string
+  label: string
+  description: string
+  icon: string
+  accentColor: string
+  lightColor: string
 }
 
-export function SuccessCard({
-  value,
-  label,
-  description,
-  icon,
-  accentColor,
-  lightColor,
-}: SuccessCardProps) {
+export function SuccessCard({ value, label, description, icon, accentColor, lightColor }: SuccessCardProps) {
   // Map icon names to components
   const iconMap = {
-    Activity: <Activity className="text-green-600 h-8 w-8" />,
-    GraduationCap: <GraduationCap className="text-amber-600 h-8 w-8" />,
-    Ruler: <Ruler className="text-blue-600 h-8 w-8" />,
-    TrendingUp: <TrendingUp className="text-purple-600 h-8 w-8" />,
-  };
+    Activity: <Activity className="text-gold-600 h-8 w-8" />,
+    GraduationCap: <GraduationCap className="text-gold-600 h-8 w-8" />,
+    Ruler: <Ruler className="text-gold-600 h-8 w-8" />,
+    TrendingUp: <TrendingUp className="text-gold-600 h-8 w-8" />,
+  }
 
-  const IconComponent = iconMap[icon] || null;
+  const IconComponent = iconMap[icon] || null
 
   // Extract numeric value and suffix
-  const numericValue = Number.parseInt(value.replace(/[^0-9]/g, ""));
-  const suffix = value.includes("+") ? "+" : value.includes("%") ? "%" : "";
+  const numericValue = Number.parseInt(value.replace(/[^0-9]/g, ""))
+  const suffix = value.includes("+") ? "+" : value.includes("%") ? "%" : ""
 
   // State for the animated counter
-  const [count, setCount] = useState(0);
-  const [isInView, setIsInView] = useState(false);
-  const cardRef = useRef(null);
+  const [count, setCount] = useState(0)
+  const [isInView, setIsInView] = useState(false)
+  const cardRef = useRef(null)
 
   // Observer to detect when card is in viewport
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
+          setIsInView(true)
+          observer.disconnect()
         }
       },
-      { threshold: 0.1 }
-    );
+      { threshold: 0.1 },
+    )
 
     if (cardRef.current) {
-      observer.observe(cardRef.current);
+      observer.observe(cardRef.current)
     }
 
     return () => {
       if (cardRef.current) {
-        observer.disconnect();
+        observer.disconnect()
       }
-    };
-  }, []);
+    }
+  }, [])
 
   // Counter animation
   useEffect(() => {
-    if (!isInView) return;
+    if (!isInView) return
 
     // Calculate animation duration and step size
-    const duration = 2000; // 2 seconds
-    const steps = 50;
-    const stepValue = Math.ceil(numericValue / steps);
-    const stepTime = duration / steps;
+    const duration = 2000 // 2 seconds
+    const steps = 50
+    const stepValue = Math.ceil(numericValue / steps)
+    const stepTime = duration / steps
 
-    let current = 0;
+    let current = 0
     const timer = setInterval(() => {
-      current += stepValue;
+      current += stepValue
       if (current >= numericValue) {
-        setCount(numericValue);
-        clearInterval(timer);
+        setCount(numericValue)
+        clearInterval(timer)
       } else {
-        setCount(current);
+        setCount(current)
       }
-    }, stepTime);
+    }, stepTime)
 
-    return () => clearInterval(timer);
-  }, [isInView, numericValue]);
+    return () => clearInterval(timer)
+  }, [isInView, numericValue])
 
   return (
     <div
@@ -101,10 +94,7 @@ export function SuccessCard({
         <div className="text-center">
           <div className="flex items-center justify-center">
             <span
-              className={`text-5xl font-bold ${accentColor.replace(
-                "bg-",
-                "text-"
-              )} mr-1 group-hover:scale-110 transition-transform`}
+              className={`text-5xl font-bold ${accentColor.replace("bg-", "text-")} mr-1 group-hover:scale-110 transition-transform`}
             >
               {count}
             </span>
@@ -115,13 +105,9 @@ export function SuccessCard({
         </div>
       </div>
       <div
-        className={`absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r ${accentColor
-          .replace("bg-", "from-")
-          .replace("600", "400")} ${accentColor.replace(
-          "bg-",
-          "to-"
-        )} transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left`}
+        className={`absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r ${accentColor.replace("bg-", "from-").replace("600", "400")} ${accentColor.replace("bg-", "to-")} transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left`}
       ></div>
     </div>
-  );
+  )
 }
+

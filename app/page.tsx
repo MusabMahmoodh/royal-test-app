@@ -20,8 +20,6 @@ import {
   MapPin,
   Activity,
   Ruler,
-  Play,
-  Apple,
 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -31,6 +29,8 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { SuccessStorySection } from "@/components/success-story-section"
 import { ContactSection } from "@/components/contact-section"
 import { FloatingContact } from "@/components/floating-contact"
+import { InstructorHighlight } from "@/components/instructor-highlight"
+import { LecturePanel } from "@/components/lecture-panel"
 
 // Import content data
 import contentData from "@/data/content.json"
@@ -115,79 +115,51 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-20 items-center justify-between  mx-auto">
+        <div className="container flex h-20 items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="flex items-center justify-center w-10 h-10 rounded-md bg-blue-600 text-white">
+            <div className="flex items-center justify-center w-10 h-10 rounded-md bg-primary text-primary-foreground">
               <GraduationCap className="h-6 w-6" />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight">
-                Royal Academy
-              </span>
+              <span className="text-xl font-bold tracking-tight">Royal Academy</span>
               <span className="text-xs text-muted-foreground">of Science</span>
             </div>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
-            <Link
-              href="/#"
-              className="font-medium transition-colors hover:text-primary"
-            >
+            <Link href="/" className="font-medium transition-colors hover:text-primary">
               Home
             </Link>
-            <Link
-              href="/#about"
-              className="font-medium text-muted-foreground transition-colors hover:text-primary"
-            >
+            <Link href="/about" className="font-medium text-muted-foreground transition-colors hover:text-primary">
               About
             </Link>
-            <Link
-              href="/#programs"
-              className="font-medium text-muted-foreground transition-colors hover:text-primary"
-            >
+            <Link href="/programs" className="font-medium text-muted-foreground transition-colors hover:text-primary">
               Programs
             </Link>
             <Link
-              href="/#achievements"
+              href="/achievements"
               className="font-medium text-muted-foreground transition-colors hover:text-primary"
             >
               Achievements
             </Link>
-            <Link
-              href="/#facilities"
-              className="font-medium text-muted-foreground transition-colors hover:text-primary"
-            >
+            <Link href="/facilities" className="font-medium text-muted-foreground transition-colors hover:text-primary">
               Facilities
             </Link>
-            <Link
-              href="/#news"
-              className="font-medium text-muted-foreground transition-colors hover:text-primary"
-            >
+            <Link href="/news" className="font-medium text-muted-foreground transition-colors hover:text-primary">
               News
             </Link>
-            <Link
-              href="/#gallery"
-              className="font-medium text-muted-foreground transition-colors hover:text-primary"
-            >
+            <Link href="/gallery" className="font-medium text-muted-foreground transition-colors hover:text-primary">
               Gallery
             </Link>
-            <Link
-              href="#contact"
-              className="font-medium text-muted-foreground transition-colors hover:text-primary"
-            >
+            <Link href="#contact" className="font-medium text-muted-foreground transition-colors hover:text-primary">
               Contact
             </Link>
           </nav>
           <div className="flex items-center gap-4">
-            <Link href="#app">
-              <Button variant="outline" size="sm" className="hidden md:flex">
-                <Download className="mr-2 h-4 w-4" />
-                Download App
-              </Button>
-            </Link>
-            <Link href="#contact">             
+            <Button variant="outline" size="sm" className="hidden md:flex">
+              <Download className="mr-2 h-4 w-4" />
+              Download App
+            </Button>
             <Button size="sm">Apply Now</Button>
-            </Link>
-
             <Button variant="ghost" size="icon" className="md:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -210,25 +182,21 @@ export default function Home() {
         </div>
       </header>
       {/* Announcement Steps */}
-      <div className="w-full bg-blue-50 py-2 border-b">
+      <div className="w-full bg-gold-50 py-2 border-b">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center justify-center md:justify-between">
-            <div className="flex items-center space-x-1 text-sm text-blue-800 font-medium">
-              <span className="bg-blue-600 text-white px-2 py-0.5 rounded-md">
-                New
-              </span>
+            <div className="flex items-center space-x-1 text-sm text-gold-800 font-medium">
+              <span className="bg-primary text-primary-foreground px-2 py-0.5 rounded-md">New</span>
               <span>{announcement.text}</span>
             </div>
             <div className="flex mt-2 md:mt-0">
               {announcement.steps.map((step, index) => (
                 <div key={index} className="flex items-center">
-                  <div className="flex items-center justify-center w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold">
+                  <div className="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-primary-foreground text-xs font-bold">
                     {index + 1}
                   </div>
                   <div className="ml-2 text-xs">{step}</div>
-                  {index < announcement.steps.length - 1 && (
-                    <div className="w-8 h-px bg-blue-300 mx-2"></div>
-                  )}
+                  {index < announcement.steps.length - 1 && <div className="w-8 h-px bg-gold-300 mx-2"></div>}
                 </div>
               ))}
             </div>
@@ -236,73 +204,65 @@ export default function Home() {
         </div>
       </div>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white overflow-hidden relative">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-[#2C1E0A] via-[#4A3417] to-[#2C1E0A] text-white overflow-hidden relative">
           {/* Animated background elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-40 -right-40 w-40 md:w-80 h-40 md:h-80 bg-blue-700 rounded-full opacity-20 animate-pulse"></div>
+            <div className="absolute -top-40 -right-40 w-80 h-80 bg-gold-500/20 rounded-full opacity-20 animate-pulse"></div>
             <div
-              className="absolute top-60 -left-20 w-40 md:w-60 h-40 md:h-60 bg-blue-600 rounded-full opacity-10 animate-pulse"
+              className="absolute top-60 -left-20 w-60 h-60 bg-gold-600/20 rounded-full opacity-10 animate-pulse"
               style={{ animationDelay: "1s" }}
             ></div>
             <div
-              className="absolute bottom-0 right-5 md:right-20 w-20 md:w-40 h-20 md:h-40 bg-blue-500 rounded-full opacity-10 animate-pulse"
+              className="absolute bottom-0 right-20 w-40 h-40 bg-gold-400/20 rounded-full opacity-10 animate-pulse"
               style={{ animationDelay: "2s" }}
             ></div>
           </div>
-          <div className="container px-4 md:px-6 relative z-10 mx-auto">
+
+          <div className="container px-4 md:px-6 relative z-10">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="flex flex-col justify-center space-y-4 animate-fadeIn">
                 <div className="space-y-2">
-                  <h1 className="text-2xl md:text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-6xl/none">
-                    {hero.title}
-                  </h1>
-                  <div className="text-sm md:text-base">
-                    {animatedContent.phrase}
-                  </div>
+                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">{hero.title}</h1>
+                  {animatedContent.phrase}
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Button
                     size="lg"
-                    className="bg-white text-blue-900 hover:bg-gray-100 animate-slideInRight text-sm md:text-base"
+                    className="bg-primary text-primary-foreground hover:bg-gold-600 animate-slideInRight"
                     style={{ animationDelay: "0.3s" }}
                   >
                     {hero.buttons.primary}
-                    <ChevronRight className="ml-2 h-3 w-3 md:h-4 md:w-4" />
+                    <ChevronRight className="ml-2 h-4 w-4" />
                   </Button>
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-white text-white hover:bg-white/10 animate-slideInRight bg-transparent text-sm md:text-base"
+                    className="border-white text-white hover:bg-white/10 animate-slideInRight bg-transparent"
                     style={{ animationDelay: "0.5s" }}
                   >
                     {hero.buttons.secondary}
                   </Button>
                 </div>
-                <div className="flex flex-wrap gap-2 md:gap-3 pt-2 md:pt-4">
+                <div className="flex flex-wrap gap-3 pt-4">
                   {hero.tags.map((tag, index) => {
-                    const TagIcon = iconMap[tag.icon];
+                    const TagIcon = iconMap[tag.icon]
                     return (
                       <Link
                         key={index}
                         href={tag.link}
-                        className="inline-flex items-center rounded-full bg-blue-800/60 px-2 md:px-3 py-1 text-xs md:text-sm hover:bg-blue-700/60 transition-colors"
+                        className="inline-flex items-center rounded-full bg-gold-800/60 px-3 py-1 text-sm hover:bg-gold-700/60 transition-colors"
                       >
-                        {TagIcon && (
-                          <TagIcon className="mr-1 h-2 w-2 md:h-3 md:w-3" />
-                        )}{" "}
-                        {tag.text}
+                        {TagIcon && <TagIcon className="mr-1 h-3 w-3" />} {tag.text}
                       </Link>
-                    );
+                    )
                   })}
                 </div>
               </div>
-              <div className="mx-auto w-full max-w-[300px] md:max-w-[450px] lg:max-w-[600px] lg:ml-auto flex justify-center animate-slideInLeft">
+              <div className="mx-auto lg:ml-auto flex justify-center animate-slideInLeft">
                 <div className="relative w-[600px] h-[400px]">
                   <Image
                     alt="Royal Academy Campus"
-                    className={`rounded-xl object-cover shadow-xl transition-opacity duration-500 ${
-                      animatedContent.isVisible ? "opacity-100" : "opacity-0"
-                    }`}
+                    className={`rounded-xl object-cover shadow-xl transition-opacity duration-500 ${animatedContent.isVisible ? "opacity-100" : "opacity-0"}`}
                     src={animatedContent.currentImage || "/placeholder.svg"}
                     fill
                     sizes="(max-width: 768px) 100vw, 600px"
@@ -314,18 +274,32 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Featured Instructor Highlight */}
+        <section className="w-full py-12 md:py-24 bg-white">
+          <div className="container px-4 md:px-6">
+            <InstructorHighlight />
+          </div>
+        </section>
+
+        {/* Lecture Panel Section */}
+        <section className="w-full py-12 md:py-24 bg-white">
+          <div className="container px-4 md:px-6">
+            <LecturePanel />
+          </div>
+        </section>
+
         {/* Modularized Success Story Section */}
         <SuccessStorySection />
+
+
+
         <section id="about" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6 mx-auto">
+          <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-900">
-                  {about.badge}
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  {about.title}
-                </h2>
+                <div className="inline-block rounded-lg bg-gold-100 px-3 py-1 text-sm text-gold-800">{about.badge}</div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">{about.title}</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   {about.description}
                 </p>
@@ -338,9 +312,7 @@ export default function Home() {
                     <li key={index}>
                       <div className="grid gap-1">
                         <h3 className="text-xl font-bold">{section.title}</h3>
-                        <p className="text-muted-foreground">
-                          {section.description}
-                        </p>
+                        <p className="text-muted-foreground">{section.description}</p>
                       </div>
                     </li>
                   ))}
@@ -358,19 +330,15 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section
-          id="programs"
-          className="w-full py-12 md:py-24 lg:py-32 bg-gray-50"
-        >
-          <div className="container px-4 md:px-6 mx-auto">
+
+        <section id="programs" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+          <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-900">
+                <div className="inline-block rounded-lg bg-gold-100 px-3 py-1 text-sm text-gold-800">
                   {programs.badge}
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  {programs.title}
-                </h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">{programs.title}</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   {programs.description}
                 </p>
@@ -378,23 +346,21 @@ export default function Home() {
             </div>
             <div className="mx-auto grid max-w-5xl gap-8 py-12 md:grid-cols-2 lg:grid-cols-3">
               {programs.items.map((program, index) => {
-                const ProgramIcon = iconMap[program.icon];
+                const ProgramIcon = iconMap[program.icon]
                 return (
                   <Card
                     key={index}
                     className="flex flex-col items-center text-center shadow-lg hover:shadow-xl transition-shadow"
                   >
                     <CardHeader className="pb-2">
-                      <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-900 mb-4">
+                      <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-gold-100 text-gold-800 mb-4">
                         {ProgramIcon && <ProgramIcon className="h-6 w-6" />}
                       </div>
                       <CardTitle>{program.title}</CardTitle>
                       <CardDescription>{program.subtitle}</CardDescription>
                     </CardHeader>
                     <CardContent className="pb-2">
-                      <p className="text-muted-foreground">
-                        {program.description}
-                      </p>
+                      <p className="text-muted-foreground">{program.description}</p>
                     </CardContent>
                     <CardFooter>
                       <Button variant="outline" size="sm" className="w-full">
@@ -403,22 +369,21 @@ export default function Home() {
                       </Button>
                     </CardFooter>
                   </Card>
-                );
+                )
               })}
             </div>
           </div>
         </section>
-        ;{/* Redesigned Success Stories Section */}
+
+        {/* Redesigned Success Stories Section */}
         <section id="achievements" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6 mx-auto">
+          <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-900">
                   {achievements.badge}
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  {achievements.title}
-                </h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">{achievements.title}</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   {achievements.description}
                 </p>
@@ -429,25 +394,17 @@ export default function Home() {
               {/* Statistics Section */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
                 {achievements.stats.map((stat) => {
-                  const StatIcon = iconMap[stat.icon];
+                  const StatIcon = iconMap[stat.icon]
                   return (
                     <div
                       key={stat.id}
                       className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow"
                     >
-                      <div className="mb-4">
-                        {StatIcon && (
-                          <StatIcon className="h-10 w-10 text-blue-500" />
-                        )}
-                      </div>
-                      <h3 className="text-4xl font-bold text-blue-900 mb-2">
-                        {stat.value}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">
-                        {stat.label}
-                      </p>
+                      <div className="mb-4">{StatIcon && <StatIcon className="h-10 w-10 text-blue-500" />}</div>
+                      <h3 className="text-4xl font-bold text-blue-900 mb-2">{stat.value}</h3>
+                      <p className="text-sm text-muted-foreground">{stat.label}</p>
                     </div>
-                  );
+                  )
                 })}
               </div>
 
@@ -458,11 +415,7 @@ export default function Home() {
                 {achievements.stories.map((story, index) => (
                   <div
                     key={story.id}
-                    className={`relative mb-16 md:mb-24 ${
-                      index % 2 === 0
-                        ? "md:pr-12 md:text-right md:ml-auto md:mr-[50%]"
-                        : "md:pl-12 md:ml-[50%]"
-                    }`}
+                    className={`relative mb-16 md:mb-24 ${index % 2 === 0 ? "md:pr-12 md:text-right md:ml-auto md:mr-[50%]" : "md:pl-12 md:ml-[50%]"}`}
                   >
                     <div
                       className="hidden md:block absolute top-6 w-6 h-6 rounded-full bg-blue-600 z-10 shadow-md"
@@ -471,11 +424,7 @@ export default function Home() {
 
                     <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 md:max-w-[90%]">
                       <div className="flex flex-col md:flex-row gap-6 items-center">
-                        <div
-                          className={`md:w-1/3 ${
-                            index % 2 === 1 ? "md:order-1" : "md:order-2"
-                          }`}
-                        >
+                        <div className={`md:w-1/3 ${index % 2 === 1 ? "md:order-1" : "md:order-2"}`}>
                           <Image
                             src={story.image || "/placeholder.svg"}
                             alt={story.name}
@@ -485,18 +434,12 @@ export default function Home() {
                           />
                           <div className="mt-4 text-center">
                             <h3 className="text-xl font-bold">{story.name}</h3>
-                            <p className="text-blue-600 font-medium">
-                              {story.achievement}
-                            </p>
+                            <p className="text-blue-600 font-medium">{story.achievement}</p>
                             <Badge className="mt-2">{story.year}</Badge>
                           </div>
                         </div>
 
-                        <div
-                          className={`md:w-2/3 ${
-                            index % 2 === 1 ? "md:order-2" : "md:order-1"
-                          }`}
-                        >
+                        <div className={`md:w-2/3 ${index % 2 === 1 ? "md:order-2" : "md:order-1"}`}>
                           <div className="mb-4">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -513,9 +456,7 @@ export default function Home() {
                               <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
                               <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
                             </svg>
-                            <p className="text-muted-foreground italic">
-                              {story.quote}
-                            </p>
+                            <p className="text-muted-foreground italic">{story.quote}</p>
                           </div>
                           <div className="flex items-center gap-2 text-sm">
                             <GraduationCap className="h-4 w-4 text-blue-600" />
@@ -530,18 +471,11 @@ export default function Home() {
 
               {/* Alumni Network */}
               <div className="mt-16 bg-gray-50 rounded-xl p-8">
-                <h3 className="text-2xl font-bold text-center mb-6">
-                  {achievements.alumni.title}
-                </h3>
-                <p className="text-muted-foreground text-center mb-8">
-                  {achievements.alumni.description}
-                </p>
+                <h3 className="text-2xl font-bold text-center mb-6">{achievements.alumni.title}</h3>
+                <p className="text-muted-foreground text-center mb-8">{achievements.alumni.description}</p>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                   {achievements.alumni.universities.map((uni, index) => (
-                    <div
-                      key={index}
-                      className="flex flex-col items-center p-4 border rounded-lg bg-white"
-                    >
+                    <div key={index} className="flex flex-col items-center p-4 border rounded-lg bg-white">
                       <Image
                         alt="University Logo"
                         className="object-contain mb-2"
@@ -564,22 +498,16 @@ export default function Home() {
             </div>
           </div>
         </section>
-        ; {
-          /* Classrooms Section */
-        }
-        <section
-          id="classrooms"
-          className="w-full py-12 md:py-24 lg:py-32 bg-gray-50"
-        >
-          <div className="container px-4 md:px-6 mx-auto">
+
+        {/* Classrooms Section */}
+        <section id="classrooms" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+          <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-900">
                   {classrooms.badge}
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  {classrooms.title}
-                </h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">{classrooms.title}</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   {classrooms.description}
                 </p>
@@ -589,10 +517,7 @@ export default function Home() {
             <div className="mx-auto max-w-6xl py-12">
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
                 {classrooms.images.map((image, index) => (
-                  <div
-                    key={index}
-                    className="relative overflow-hidden rounded-xl"
-                  >
+                  <div key={index} className="relative overflow-hidden rounded-xl">
                     <Image
                       alt={image.alt}
                       className="object-cover w-full h-full"
@@ -612,7 +537,7 @@ export default function Home() {
 
               <div className="grid gap-6 mt-12 md:grid-cols-2 lg:grid-cols-4">
                 {classrooms.features.map((feature) => {
-                  const FeatureIcon = iconMap[feature.icon] || iconMap.Monitor;
+                  const FeatureIcon = iconMap[feature.icon] || iconMap.Monitor
                   return (
                     <Card key={feature.id} className="text-center">
                       <CardHeader>
@@ -622,12 +547,10 @@ export default function Home() {
                         <CardTitle>{feature.title}</CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <p className="text-muted-foreground">
-                          {feature.description}
-                        </p>
+                        <p className="text-muted-foreground">{feature.description}</p>
                       </CardContent>
                     </Card>
-                  );
+                  )
                 })}
               </div>
 
@@ -639,18 +562,15 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>;
+        </section>
+
         {/* News Section */}
         <section id="news" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6 mx-auto">
+          <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-900">
-                  {news.badge}
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  {news.title}
-                </h2>
+                <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-900">{news.badge}</div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">{news.title}</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   {news.description}
                 </p>
@@ -670,9 +590,7 @@ export default function Home() {
                         width={300}
                       />
                       <div className="absolute top-2 right-2">
-                        <Badge className="bg-blue-600 hover:bg-blue-700">
-                          News
-                        </Badge>
+                        <Badge className="bg-blue-600 hover:bg-blue-700">News</Badge>
                       </div>
                     </div>
                     <CardHeader className="p-4">
@@ -680,14 +598,10 @@ export default function Home() {
                         <Calendar className="h-4 w-4" />
                         <span>{item.date}</span>
                       </div>
-                      <CardTitle className="line-clamp-2 text-lg">
-                        {item.title}
-                      </CardTitle>
+                      <CardTitle className="line-clamp-2 text-lg">{item.title}</CardTitle>
                     </CardHeader>
                     <CardContent className="p-4 pt-0">
-                      <p className="text-muted-foreground text-sm line-clamp-3">
-                        {item.excerpt}
-                      </p>
+                      <p className="text-muted-foreground text-sm line-clamp-3">{item.excerpt}</p>
                     </CardContent>
                     <CardFooter className="p-4 pt-0">
                       <Button variant="outline" size="sm" className="w-full">
@@ -712,20 +626,16 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         {/* Gallery Section */}
-        <section
-          id="gallery"
-          className="w-full py-12 md:py-24 lg:py-32 bg-gray-50"
-        >
-          <div className="container px-4 md:px-6 mx-auto">
+        <section id="gallery" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+          <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-900">
                   {gallery.badge}
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  {gallery.title}
-                </h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">{gallery.title}</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   {gallery.description}
                 </p>
@@ -736,10 +646,7 @@ export default function Home() {
               <Carousel className="w-full">
                 <CarouselContent>
                   {gallery.images.map((image) => (
-                    <CarouselItem
-                      key={image.id}
-                      className="md:basis-1/2 lg:basis-1/3"
-                    >
+                    <CarouselItem key={image.id} className="md:basis-1/2 lg:basis-1/3">
                       <div className="p-1">
                         <div className="overflow-hidden rounded-xl">
                           <Image
@@ -784,19 +691,15 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section
-          id="faculty"
-          className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-white to-gray-50"
-        >
-          <div className="container px-4 md:px-6 mx-auto">
+
+        <section id="faculty" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-white to-gray-50">
+          <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-900">
                   {faculty.badge}
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  {faculty.title}
-                </h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">{faculty.title}</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   {faculty.description}
                 </p>
@@ -816,12 +719,8 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-transparent flex items-center">
                       <div className="p-8 text-white">
-                        <h3 className="text-3xl font-bold mb-2">
-                          {faculty.featured.name}
-                        </h3>
-                        <p className="text-xl text-blue-100">
-                          {faculty.featured.position}
-                        </p>
+                        <h3 className="text-3xl font-bold mb-2">{faculty.featured.name}</h3>
+                        <p className="text-xl text-blue-100">{faculty.featured.position}</p>
                         <div className="flex gap-3 mt-4">
                           <div className="bg-white/20 p-2 rounded-full">
                             <svg
@@ -867,21 +766,9 @@ export default function Home() {
                               strokeLinecap="round"
                               strokeLinejoin="round"
                             >
-                              <rect
-                                x="2"
-                                y="2"
-                                width="20"
-                                height="20"
-                                rx="5"
-                                ry="5"
-                              ></rect>
+                              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                              <line
-                                x1="17.5"
-                                y1="6.5"
-                                x2="17.51"
-                                y2="6.5"
-                              ></line>
+                              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                             </svg>
                           </div>
                         </div>
@@ -892,24 +779,16 @@ export default function Home() {
                     <div className="mb-6">
                       <div className="flex items-center gap-2 mb-4">
                         <div className="h-1 w-10 bg-blue-600"></div>
-                        <span className="text-blue-600 font-medium">
-                          Featured Educator
-                        </span>
+                        <span className="text-blue-600 font-medium">Featured Educator</span>
                       </div>
-                      <p className="text-muted-foreground">
-                        {faculty.featured.description}
-                      </p>
+                      <p className="text-muted-foreground">{faculty.featured.description}</p>
                     </div>
 
                     <div className="grid grid-cols-2 gap-4 mb-6">
                       {faculty.featured.stats.map((stat, index) => (
                         <div key={index} className="bg-gray-50 p-4 rounded-lg">
-                          <div className="text-3xl font-bold text-blue-600 mb-1">
-                            {stat.value}
-                          </div>
-                          <div className="text-sm text-muted-foreground">
-                            {stat.label}
-                          </div>
+                          <div className="text-3xl font-bold text-blue-600 mb-1">{stat.value}</div>
+                          <div className="text-sm text-muted-foreground">{stat.label}</div>
                         </div>
                       ))}
                     </div>
@@ -925,9 +804,7 @@ export default function Home() {
               </div>
 
               {/* Other Faculty Members */}
-              <h3 className="text-2xl font-bold mb-8 text-center">
-                Meet Our Other Specialists
-              </h3>
+              <h3 className="text-2xl font-bold mb-8 text-center">Meet Our Other Specialists</h3>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {faculty.members.map((member, index) => (
@@ -944,9 +821,7 @@ export default function Home() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                         <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                          <p className="text-white text-sm mb-4">
-                            {member.description}
-                          </p>
+                          <p className="text-white text-sm mb-4">{member.description}</p>
                           <div className="flex gap-2">
                             <Button
                               size="sm"
@@ -955,10 +830,7 @@ export default function Home() {
                             >
                               View Profile
                             </Button>
-                            <Button
-                              size="sm"
-                              className="bg-blue-600 hover:bg-blue-700"
-                            >
+                            <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
                               Contact
                             </Button>
                           </div>
@@ -968,13 +840,9 @@ export default function Home() {
                     <div className="p-6">
                       <div className="flex items-center justify-between mb-2">
                         <h3 className="text-xl font-bold">{member.name}</h3>
-                        <Badge className="bg-blue-100 text-blue-900 hover:bg-blue-200">
-                          {member.department}
-                        </Badge>
+                        <Badge className="bg-blue-100 text-blue-900 hover:bg-blue-200">{member.department}</Badge>
                       </div>
-                      <p className="text-muted-foreground text-sm">
-                        {member.position}
-                      </p>
+                      <p className="text-muted-foreground text-sm">{member.position}</p>
                       <div className="mt-4 flex items-center gap-2">
                         <div className="flex -space-x-2">
                           <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-xs">
@@ -1025,9 +893,7 @@ export default function Home() {
                             </svg>
                           </div>
                         </div>
-                        <span className="text-xs text-muted-foreground">
-                          {member.experience}
-                        </span>
+                        <span className="text-xs text-muted-foreground">{member.experience}</span>
                       </div>
                     </div>
                   </div>
@@ -1043,225 +909,97 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section
-          id="app"
-          className="w-full py-12 md:py-24 lg:py-32 bg-blue-900 text-white"
-        >
-          <div className="container px-4 md:px-6 mx-auto">
-            <div className="grid lg:grid-cols-2  items-center">
+
+        <section id="app" className="w-full py-12 md:py-24 lg:py-32 bg-blue-900 text-white">
+          <div className="container px-4 md:px-6">
+            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-blue-800 px-3 py-1 text-sm">
-                    Mobile App
-                  </div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                    Learning at Your Fingertips
-                  </h2>
+                  <div className="inline-block rounded-lg bg-blue-800 px-3 py-1 text-sm">{app.badge}</div>
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{app.title}</h2>
                   <p className="max-w-[600px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    Download our mobile app for access to study materials,
-                    practice tests, and personalized learning paths.
+                    {app.description}
                   </p>
                 </div>
                 <div className="flex flex-col gap-4 sm:flex-row">
                   <a
-                    href="https://play.google.com/store/apps/details?id=com.fazlurajan.royalacademyputtalam&hl=en"
+                    href={app.googlePlayLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-md bg-black px-4 py-3 text-sm font-medium text-white transition-colors hover:bg-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                    className="inline-flex items-center justify-center rounded-md bg-white text-blue-900 py-3 px-6 font-medium hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1"
                   >
-                    <Play className="mr-2 h-5 w-5" />
-                    <div className="flex flex-col">
-                      <span className="text-xs">GET IT ON</span>
-                      <span>Google Play</span>
-                    </div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="mr-2 h-5 w-5"
+                    >
+                      <path d="M22 12h-4l-3 8H5l-3-8h-4"></path>
+                      <path d="M5 12H19"></path>
+                    </svg>
+                    {app.buttons.googlePlay}
                   </a>
                   <a
-                    href="https://apps.apple.com/lk/app/royal-academy-of-science/id1546360973"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-md bg-black px-4 py-3 text-sm font-medium text-white transition-colors hover:bg-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                    href={app.appStoreLink}
+                    className="inline-flex items-center justify-center rounded-md bg-white text-blue-900 py-3 px-6 font-medium hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1"
                   >
-                    <Apple className="mr-2 h-5 w-5" />
-                    <div className="flex flex-col">
-                      <span className="text-xs">Download on the</span>
-                      <span>App Store</span>
-                    </div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="mr-2 h-5 w-5"
+                    >
+                      <path d="M12 22c-5.523 0-10-4.477-10-10S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"></path>
+                      <path d="M16.24 7.76l-1.414 1.414L14 7.414V15a1 1 0 0 1-2 0V7.414l-1.828 1.757-1.414-1.414L12 4l4.24 3.76z"></path>
+                    </svg>
+                    {app.buttons.appStore}
                   </a>
                 </div>
-                <div className="flex items-center gap-4 pt-4">
-                  <div className="flex items-center gap-1">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-5 w-5 fill-primary text-yellow-400"
-                    >
-                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-5 w-5 fill-primary text-yellow-400"
-                    >
-                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-5 w-5 fill-primary text-yellow-400"
-                    >
-                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-5 w-5 fill-primary text-yellow-400"
-                    >
-                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-5 w-5 fill-primary text-yellow-400"
-                    >
-                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                    </svg>
-                  </div>
-                  <div className="text-sm text-gray-300">
-                    4.9 Rating (2000+ Reviews)
-                  </div>
-                </div>
-                <ul className="space-y-2 mt-4">
-                  <li className="flex items-center gap-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-5 w-5 text-green-400"
-                    >
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Access lecture videos anytime, anywhere</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-5 w-5 text-green-400"
-                    >
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Download and read PDF notes offline</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-5 w-5 text-green-400"
-                    >
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Practice with online tests and quizzes</span>
-                  </li>
-                </ul>
               </div>
-              <div className=" flex justify-center">
-                <div className="relative">
-                  <Image
-                    alt="Mobile App Screenshot"
-                    className="rounded-xl object-cover shadow-2xl"
-                    height={500}
-                    src="/images/app-screenshot.jpg"
-                    width={250}
-                  />
-                  <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg">
-                    <div className="text-blue-900 font-bold">10K+</div>
-                    <div className="text-sm text-gray-600">Downloads</div>
-                  </div>
-                </div>
+              <div className="mx-auto lg:ml-auto">
+                <Image
+                  alt="Mobile App Interface"
+                  className="rounded-xl shadow-2xl"
+                  height={500}
+                  src={app.image || "/placeholder.svg"}
+                  width={400}
+                />
               </div>
             </div>
           </div>
         </section>
+
         {/* Contact Section */}
         <ContactSection data={contact} />
       </main>
       <footer className="w-full border-t bg-background">
-        <div className="container py-12 px-4 md:px-6 mx-auto">
+        <div className="container py-12 px-4 md:px-6">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             <div className="flex flex-col space-y-4">
               <div className="flex items-center gap-2">
-                <div className="flex items-center justify-center w-8 h-8 rounded-md bg-blue-600 text-white">
+                <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary text-primary-foreground">
                   <GraduationCap className="h-4 w-4" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-lg font-bold tracking-tight">
-                    Royal Academy
-                  </span>
-                  <span className="text-xs text-muted-foreground">
-                    of Science
-                  </span>
+                  <span className="text-lg font-bold tracking-tight">Royal Academy</span>
+                  <span className="text-xs text-muted-foreground">of Science</span>
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground">
-                {footer.description}
-              </p>
+              <p className="text-sm text-muted-foreground">{footer.description}</p>
               <div className="flex items-center space-x-2">
-                <a href="#" className="text-gray-400 hover:text-gray-500">
+                <a href="#" className="text-gray-400 hover:text-primary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -1277,7 +1015,7 @@ export default function Home() {
                     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                   </svg>
                 </a>
-                <a href="#" className="text-gray-400 hover:text-gray-500">
+                <a href="#" className="text-gray-400 hover:text-primary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -1290,19 +1028,12 @@ export default function Home() {
                     strokeLinejoin="round"
                     className="h-5 w-5"
                   >
-                    <rect
-                      x="2"
-                      y="2"
-                      width="20"
-                      height="20"
-                      rx="5"
-                      ry="5"
-                    ></rect>
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                   </svg>
                 </a>
-                <a href="#" className="text-gray-400 hover:text-gray-500">
+                <a href="#" className="text-gray-400 hover:text-primary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -1323,11 +1054,7 @@ export default function Home() {
             <div className="flex flex-col space-y-2">
               <h4 className="text-sm font-semibold">Quick Links</h4>
               {footer.quickLinks.map((link, index) => (
-                <Link
-                  key={index}
-                  href={link.href}
-                  className="text-sm text-muted-foreground hover:text-primary"
-                >
+                <Link key={index} href={link.href} className="text-sm text-muted-foreground hover:text-primary">
                   {link.text}
                 </Link>
               ))}
@@ -1335,37 +1062,25 @@ export default function Home() {
             <div className="flex flex-col space-y-2">
               <h4 className="text-sm font-semibold">Facilities</h4>
               {footer.facilities.map((facility, index) => (
-                <Link
-                  key={index}
-                  href={facility.href}
-                  className="text-sm text-muted-foreground hover:text-primary"
-                >
+                <Link key={index} href={facility.href} className="text-sm text-muted-foreground hover:text-primary">
                   {facility.text}
                 </Link>
               ))}
             </div>
             <div className="flex flex-col space-y-2">
               <h4 className="text-sm font-semibold">Contact Us</h4>
-              <p className="text-sm text-muted-foreground">
-                {footer.contact.address}
-              </p>
-              <p className="text-sm text-muted-foreground">
-                Email: {footer.contact.email}
-              </p>
-              <p className="text-sm text-muted-foreground">
-                Phone: {footer.contact.phone}
-              </p>
+              <p className="text-sm text-muted-foreground">{footer.contact.address}</p>
+              <p className="text-sm text-muted-foreground">Email: {footer.contact.email}</p>
+              <p className="text-sm text-muted-foreground">Phone: {footer.contact.phone}</p>
             </div>
           </div>
-          <div className="border-t py-6 mt-10 text-center text-sm text-muted-foreground">
-            {footer.copyright}
-          </div>
+          <div className="border-t py-6 mt-10 text-center text-sm text-muted-foreground">{footer.copyright}</div>
         </div>
       </footer>
 
       {/* Floating Contact Button */}
-      {/* <FloatingContact data={floatingContact} /> */}
+      <FloatingContact data={floatingContact} />
     </div>
-  );
+  )
 }
 

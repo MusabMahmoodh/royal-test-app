@@ -63,12 +63,12 @@ export function ContactSection({ data }: ContactSectionProps) {
   return (
     <section
       id="contact"
-      className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-white to-blue-50 overflow-hidden"
+      className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-white to-gold-50 overflow-hidden"
     >
-      <div className="container px-4 md:px-6 relative mx-auto">
+      <div className="container px-4 md:px-6 relative">
         {/* Decorative elements */}
-        <div className="absolute top-20 left-0 w-64 h-64 bg-blue-100 rounded-full opacity-30 blur-3xl -z-10"></div>
-        <div className="absolute bottom-20 right-0 w-80 h-80 bg-green-100 rounded-full opacity-30 blur-3xl -z-10"></div>
+        <div className="absolute top-20 left-0 w-64 h-64 bg-gold-100 rounded-full opacity-30 blur-3xl -z-10"></div>
+        <div className="absolute bottom-20 right-0 w-80 h-80 bg-gold-100 rounded-full opacity-30 blur-3xl -z-10"></div>
 
         <SectionHeading badge={data.badge} title={data.title} description={data.description} />
 
@@ -93,12 +93,12 @@ export function ContactSection({ data }: ContactSectionProps) {
                 >
                   <CardContent className="p-0 h-full">
                     <div className="flex flex-col h-full">
-                      <div className={`${method.color} p-8 flex items-center justify-center`}>
-                        <div className="text-white">{iconMap[method.icon]}</div>
+                      <div className={`bg-primary p-8 flex items-center justify-center`}>
+                        <div className="text-primary-foreground">{iconMap[method.icon]}</div>
                       </div>
                       <div className="p-6 flex-1 flex flex-col">
                         <h3 className="text-2xl font-bold mb-2">{method.label}</h3>
-                        <p className="text-lg font-medium text-blue-600 mb-3">{method.value}</p>
+                        <p className="text-lg font-medium text-gold-600 mb-3">{method.value}</p>
                         <p className="text-sm text-muted-foreground mb-6">{method.description}</p>
 
                         <div className="mt-auto flex gap-2">
@@ -126,7 +126,7 @@ export function ContactSection({ data }: ContactSectionProps) {
                             rel="noopener noreferrer"
                             className="flex-1"
                           >
-                            <Button className={`w-full ${method.color}`} size="sm">
+                            <Button className="w-full bg-primary hover:bg-gold-600" size="sm">
                               <ExternalLink className="h-4 w-4 mr-2" />
                               {method.type === "phone" ? "Call" : method.type === "email" ? "Email" : "Chat"}
                             </Button>
@@ -139,7 +139,7 @@ export function ContactSection({ data }: ContactSectionProps) {
 
                 {/* Animated decorative elements */}
                 <div
-                  className={`absolute -z-10 ${method.lightColor} w-full h-full rounded-xl transform rotate-3 -translate-x-2 translate-y-2 opacity-50 transition-transform duration-300 ${isHovering === index ? "rotate-6 -translate-x-4 translate-y-4" : ""}`}
+                  className={`absolute -z-10 bg-gold-200 w-full h-full rounded-xl transform rotate-3 -translate-x-2 translate-y-2 opacity-50 transition-transform duration-300 ${isHovering === index ? "rotate-6 -translate-x-4 translate-y-4" : ""}`}
                 ></div>
               </motion.div>
             ))}
@@ -152,7 +152,7 @@ export function ContactSection({ data }: ContactSectionProps) {
               Experience our state-of-the-art facilities and meet our expert faculty in person.
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center">
-              <div className="flex items-center justify-center bg-blue-50 p-4 rounded-lg">
+              <div className="flex items-center justify-center bg-gold-50 p-4 rounded-lg">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -163,14 +163,14 @@ export function ContactSection({ data }: ContactSectionProps) {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="h-6 w-6 text-blue-600 mr-2"
+                  className="h-6 w-6 text-gold-600 mr-2"
                 >
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
                 <span className="font-medium">123, Main Street, Colombo, Sri Lanka</span>
               </div>
-              <div className="flex items-center justify-center bg-green-50 p-4 rounded-lg">
+              <div className="flex items-center justify-center bg-gold-50 p-4 rounded-lg">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -181,7 +181,7 @@ export function ContactSection({ data }: ContactSectionProps) {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="h-6 w-6 text-green-600 mr-2"
+                  className="h-6 w-6 text-gold-600 mr-2"
                 >
                   <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                   <line x1="16" y1="2" x2="16" y2="6"></line>
@@ -193,7 +193,7 @@ export function ContactSection({ data }: ContactSectionProps) {
             </div>
 
             <div className="mt-8">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+              <Button size="lg" className="bg-primary hover:bg-gold-600">
                 Schedule a Campus Tour
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -204,7 +204,7 @@ export function ContactSection({ data }: ContactSectionProps) {
           <motion.div variants={itemVariants} className="mt-12 flex flex-wrap justify-center gap-4">
             <a
               href="#"
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground hover:bg-gold-600 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -222,7 +222,7 @@ export function ContactSection({ data }: ContactSectionProps) {
             </a>
             <a
               href="#"
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-pink-600 text-white hover:bg-pink-700 transition-colors"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground hover:bg-gold-600 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -242,7 +242,7 @@ export function ContactSection({ data }: ContactSectionProps) {
             </a>
             <a
               href="#"
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-sky-500 text-white hover:bg-sky-600 transition-colors"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground hover:bg-gold-600 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -260,7 +260,7 @@ export function ContactSection({ data }: ContactSectionProps) {
             </a>
             <a
               href="#"
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-red-600 text-white hover:bg-red-700 transition-colors"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground hover:bg-gold-600 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -279,7 +279,7 @@ export function ContactSection({ data }: ContactSectionProps) {
             </a>
             <a
               href="#"
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-800 text-white hover:bg-blue-900 transition-colors"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground hover:bg-gold-600 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -81,11 +81,7 @@ export function FloatingContact({ data }: FloatingContactProps) {
   const pulseVariants = {
     pulse: {
       scale: [1, 1.05, 1],
-      boxShadow: [
-        "0 0 0 0 rgba(59, 130, 246, 0.4)",
-        "0 0 0 10px rgba(59, 130, 246, 0)",
-        "0 0 0 0 rgba(59, 130, 246, 0)",
-      ],
+      boxShadow: ["0 0 0 0 rgba(255, 195, 0, 0.4)", "0 0 0 10px rgba(255, 195, 0, 0)", "0 0 0 0 rgba(255, 195, 0, 0)"],
       transition: {
         duration: 2,
         repeat: Number.POSITIVE_INFINITY,
@@ -118,7 +114,7 @@ export function FloatingContact({ data }: FloatingContactProps) {
                   href={method.action}
                   target={method.type === "email" || method.type === "whatsapp" ? "_blank" : undefined}
                   rel="noopener noreferrer"
-                  className={`flex items-center gap-3 px-4 py-3 rounded-full shadow-lg text-white ${method.color} transform transition-all duration-300 ${activeMethod === index ? "pr-12" : ""}`}
+                  className={`flex items-center gap-3 px-4 py-3 rounded-full shadow-lg text-primary-foreground bg-primary transform transition-all duration-300 ${activeMethod === index ? "pr-12" : ""}`}
                 >
                   {iconMap[method.icon]}
                   <span className="text-sm font-medium whitespace-nowrap">
@@ -127,7 +123,7 @@ export function FloatingContact({ data }: FloatingContactProps) {
 
                   {activeMethod === index && (
                     <motion.div
-                      className="absolute right-2 bg-white text-blue-600 rounded-full p-1"
+                      className="absolute right-2 bg-white text-primary rounded-full p-1"
                       initial={{ opacity: 0, scale: 0 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0 }}
@@ -141,7 +137,7 @@ export function FloatingContact({ data }: FloatingContactProps) {
                 {/* Animated background */}
                 {activeMethod === index && (
                   <motion.div
-                    className={`absolute inset-0 -z-10 ${method.color} rounded-full opacity-20 blur-md`}
+                    className="absolute inset-0 -z-10 bg-gold-500 rounded-full opacity-20 blur-md"
                     layoutId={`contact-bg-${index}`}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 0.2 }}
@@ -166,7 +162,7 @@ export function FloatingContact({ data }: FloatingContactProps) {
       {/* Toggle Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className={`h-14 w-14 rounded-full shadow-lg ${isOpen ? "bg-gray-700" : "bg-blue-600"} hover:bg-blue-700 transition-colors duration-300 text-white flex items-center justify-center focus:outline-none`}
+        className={`h-14 w-14 rounded-full shadow-lg ${isOpen ? "bg-gray-700" : "bg-primary"} hover:bg-gold-600 transition-colors duration-300 text-white flex items-center justify-center focus:outline-none`}
         variants={pulseVariants}
         animate={!isOpen ? "pulse" : ""}
         whileHover={{ scale: 1.1 }}
